@@ -13,7 +13,7 @@ body {
 
 /* Header styling */
 header {
-    background-color: #000;
+    background-color: #007BFF; /* Updated color to match a vibrant KBC theme */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -31,30 +31,31 @@ header h2 {
 /* Main content styling */
 main {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 40px auto; /* Increased margin for visual separation from the footer */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #000;
+    background-color: #007BFF; /* Matching the header */
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
+
 /* Quiz container styling */
 .quiz-container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Ensure there's space before the fixed footer */
 }
 
 /* Question styling */
@@ -71,15 +72,32 @@ footer {
 }
 
 .option {
-    background-color: #f0f0f0;
-    border: none;
+    background-color: #e9ecef; /* Slightly lighter for better readability */
+    border: 2px solid #007BFF; /* Added border to match the theme */
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for interaction */
 }
 
 .option:hover {
     background-color: #ddd;
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+/* Styling for the 'Start a new game' button */
+.new-game-button {
+    background-color: #28a745; /* Green color for starting new game */
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-game-button:hover {
+    background-color: #218838; /* Darker green on hover */
 }

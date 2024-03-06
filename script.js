@@ -86,38 +86,31 @@ const questions = [
     }
 ];
 
-window.onload = function() {
-
-    // Shuffle the questions array
-    shuffleArray(questions);
-
-    // Initialize variables
-    var currentQuestionIndex = 0;
-    var answeredQuestions = [];
-    var correctAnswersCount = 0;
-    var questionsCount = 10; // Number of questions per player
-
-    // Function to shuffle an array (Fisher-Yates shuffle algorithm)
-    function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+// Function to shuffle an array (Fisher-Yates shuffle algorithm)
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+}
 
-    // Function to display next question
+window.onload = function() {
+    startNewGame();
+};
+
+function startNewGame() {
+    shuffleArray(questions); // Shuffle the questions for the new game
+    var currentQuestionIndex = 0;
+    var correctAnswersCount = 0;
+    var totalAttemptedQuestionsCount = 0; // Reset total attempted questions for the new game
+
     function displayNextQuestion() {
-        if (answeredQuestions.length >= questionsCount) {
-            alert("Congratulations! You've completed the quiz!");
+        if (totalAttemptedQuestionsCount >= 10) {
+            displayEndOfGame();
             return;
         }
 
-        if (currentQuestionIndex >= questions.length) {
-            alert("There are not enough questions for the quiz!");
-            return;
-        }
-
-        var currentQuestion = questions[currentQuestionIndex];
+        var currentQuestion = questions[currentQuestionIndex % questions.length]; // Use modulo to cycle through questions if needed
         var questionElement = document.querySelector('.question h3');
         var optionsContainer = document.querySelector('.options');
 
@@ -126,39 +119,58 @@ window.onload = function() {
 
         currentQuestion.options.forEach(function(option, index) {
             var button = document.createElement('button');
-            button.textContent = String.fromCharCode(65 + index) + ". " + option;
+            button.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
             button.classList.add('option');
-            button.addEventListener('click', function() {
+            button.onclick = function() {
                 checkAnswer(option, currentQuestion.answer);
-            });
+            };
             optionsContainer.appendChild(button);
         });
 
         currentQuestionIndex++;
     }
 
-    // Function to check answer
     function checkAnswer(selectedOption, correctAnswer) {
+        totalAttemptedQuestionsCount++;
         if (selectedOption === correctAnswer) {
-            alert("Correct answer!");
             correctAnswersCount++;
-        } else {
-            alert("Thank you for playing!");
         }
-        updateCorrectAnswersDisplay();
+        // Update the attempted questions count display
+        document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${totalAttemptedQuestionsCount}`;
+    
         displayNextQuestion();
     }
+    
 
-    // Display correct answers count
-    var correctAnswersDisplay = document.createElement('div');
-    correctAnswersDisplay.classList.add('correct-answers');
-    document.body.appendChild(correctAnswersDisplay);
-
-    // Update correct answers count display
-    function updateCorrectAnswersDisplay() {
-        correctAnswersDisplay.textContent = "Correct Answers: " + correctAnswersCount;
+    function displayEndOfGame() {
+        document.getElementById('quiz-container').style.display = 'none';
+        const endOfGameElement = document.getElementById('end-of-game');
+        endOfGameElement.style.display = 'block';
+        endOfGameElement.innerHTML = ''; // Clear previous content
+        const scoreDisplay = document.createElement('p');
+        scoreDisplay.textContent = `Final Score: ${correctAnswersCount} out of ${totalAttemptedQuestionsCount}`;
+        endOfGameElement.appendChild(scoreDisplay);
+        const attemptedQuestionsDisplay = document.createElement('p');
+        attemptedQuestionsDisplay.textContent = `You attempted ${totalAttemptedQuestionsCount} questions.`;
+        endOfGameElement.appendChild(attemptedQuestionsDisplay);
+        const newGameButton = document.createElement('button');
+        newGameButton.textContent = 'Start New Game';
+        newGameButton.id = 'new-game-button';
+        newGameButton.classList.add('new-game-button'); // Ensure you have this class in your CSS for styling
+        newGameButton.onclick = function() {
+            document.getElementById('quiz-container').style.display = 'block';
+            endOfGameElement.style.display = 'none';
+            startNewGame(); // Restart the game setup
+        };
+        endOfGameElement.appendChild(newGameButton);
     }
+    
+    
 
-    // Display the first question
+    // Reset the quiz container and end-of-game message for the new game
+    document.getElementById('quiz-container').style.display = 'block';
+    document.getElementById('end-of-game').style.display = 'none';
+
+    // Display the first question for the new game
     displayNextQuestion();
-};
+}
