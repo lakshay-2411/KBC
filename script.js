@@ -83,94 +83,164 @@ const questions = [
         question: "Who wrote 'To Kill a Mockingbird'?",
         options: ["Harper Lee", "J.K. Rowling", "Ernest Hemingway", "Stephen King"],
         answer: "Harper Lee"
+    },
+    {
+        question: "What is the capital of India?",
+        options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+        answer: "Delhi"
+    },
+    {
+        question: "What is the largest ocean in the world?",
+        options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+        answer: "Pacific Ocean"
+    },
+    {
+        question: "What is the chemical symbol for the element oxygen?",
+        options: ["O", "O2", "O3", "O4"],
+        answer: "O"
+    },
+    {
+        question: "Who wrote 'The Great Gatsby'?",
+        options: ["F. Scott Fitzgerald", "Ernest Hemingway", "William Faulkner", "John Steinbeck"],
+        answer: "F. Scott Fitzgerald"
+    },
+    {
+        question: "What is the largest animal in the world?",
+        options: ["African Elephant", "Blue Whale", "Giraffe", "African Lion"],
+        answer: "Blue Whale"
+    },
+    {
+        question: "What is the capital of Australia?",
+        options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        answer: "Canberra"
+    },
+    {
+        question: "What is the chemical symbol for the element silver?",
+        options: ["Si", "Ag", "S", "Sl"],
+        answer: "Ag"
+    },
+    {
+        question: "Who painted the 'The Starry Night'?",
+        options: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Edvard Munch"],
+        answer: "Vincent van Gogh"
+    },
+    {
+        question: "What is the boiling point of water in Fahrenheit?",
+        options: ["212°F", "100°F", "50°F", "0°F"],
+        answer: "212°F"
+    },
+    {
+        question: "Which country is known as the Land of the Midnight Sun?",
+        options: ["Norway", "Sweden", "Finland", "Iceland"],
+        answer: "Norway"
+    },
+    {
+        question: "which is the largest country in the world?",
+        options: ["Canada", "China", "Russia", "USA"],
+        answer: "Russia"
+    },
+    {
+        question: "Which has the largest population in the world?",
+        options: ["China", "India", "USA", "Russia"],
+        answer: "China"
+    },
+    {
+        question: "Which is the largest desert in the world?",
+        options: ["Sahara", "Arabian", "Gobi", "Kalahari"],
+        answer: "Sahara"
     }
 ];
 
-// Function to shuffle an array (Fisher-Yates shuffle algorithm)
 function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
 window.onload = function() {
-    startNewGame();
+    startNewGame(true);
 };
 
-function startNewGame() {
-    shuffleArray(questions); // Shuffle the questions for the new game
-    var currentQuestionIndex = 0;
-    var correctAnswersCount = 0;
-    var totalAttemptedQuestionsCount = 0; // Reset total attempted questions for the new game
+let shuffledQuestions = [];
+const maxQuestionsPerSet = 10;
+let correctAnswersCount = 0;
+let totalAttemptedQuestionsCount = 0;
+let questionsInCurrentSetCount = 0; // Track the number of questions attempted in the current set
 
-    function displayNextQuestion() {
-        if (totalAttemptedQuestionsCount >= 10) {
-            displayEndOfGame();
-            return;
-        }
-
-        var currentQuestion = questions[currentQuestionIndex % questions.length]; // Use modulo to cycle through questions if needed
-        var questionElement = document.querySelector('.question h3');
-        var optionsContainer = document.querySelector('.options');
-
-        questionElement.textContent = currentQuestion.question;
-        optionsContainer.innerHTML = '';
-
-        currentQuestion.options.forEach(function(option, index) {
-            var button = document.createElement('button');
-            button.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
-            button.classList.add('option');
-            button.onclick = function() {
-                checkAnswer(option, currentQuestion.answer);
-            };
-            optionsContainer.appendChild(button);
-        });
-
-        currentQuestionIndex++;
-    }
-
-    function checkAnswer(selectedOption, correctAnswer) {
-        totalAttemptedQuestionsCount++;
-        if (selectedOption === correctAnswer) {
-            correctAnswersCount++;
-        }
-        // Update the attempted questions count display
-        document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${totalAttemptedQuestionsCount}`;
-    
-        displayNextQuestion();
+function startNewGame(isNewGame) {
+    if (isNewGame) {
+        // If it's a completely new game, shuffle and reset everything.
+        shuffledQuestions = [...questions];
+        shuffleArray(shuffledQuestions);
+        correctAnswersCount = 0;
+        totalAttemptedQuestionsCount = 0;
+        questionsInCurrentSetCount = 0;
+    } else {
+        // If it's just a new set in the same game, only reset the set-specific counters.
+        correctAnswersCount = 0; // Reset score for the new set.
+        questionsInCurrentSetCount = 0;
     }
     
-
-    function displayEndOfGame() {
-        document.getElementById('quiz-container').style.display = 'none';
-        const endOfGameElement = document.getElementById('end-of-game');
-        endOfGameElement.style.display = 'block';
-        endOfGameElement.innerHTML = ''; // Clear previous content
-        const scoreDisplay = document.createElement('p');
-        scoreDisplay.textContent = `Final Score: ${correctAnswersCount} out of ${totalAttemptedQuestionsCount}`;
-        endOfGameElement.appendChild(scoreDisplay);
-        const attemptedQuestionsDisplay = document.createElement('p');
-        attemptedQuestionsDisplay.textContent = `You attempted ${totalAttemptedQuestionsCount} questions.`;
-        endOfGameElement.appendChild(attemptedQuestionsDisplay);
-        const newGameButton = document.createElement('button');
-        newGameButton.textContent = 'Start New Game';
-        newGameButton.id = 'new-game-button';
-        newGameButton.classList.add('new-game-button'); // Ensure you have this class in your CSS for styling
-        newGameButton.onclick = function() {
-            document.getElementById('quiz-container').style.display = 'block';
-            endOfGameElement.style.display = 'none';
-            startNewGame(); // Restart the game setup
-        };
-        endOfGameElement.appendChild(newGameButton);
-    }
-    
-    
-
-    // Reset the quiz container and end-of-game message for the new game
     document.getElementById('quiz-container').style.display = 'block';
     document.getElementById('end-of-game').style.display = 'none';
-
-    // Display the first question for the new game
+    document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${questionsInCurrentSetCount}`;
     displayNextQuestion();
+}
+
+function displayNextQuestion() {
+    if (questionsInCurrentSetCount >= maxQuestionsPerSet) {
+        displayEndOfGame(false);
+        return;
+    } else if (shuffledQuestions.length === 0 || totalAttemptedQuestionsCount === questions.length) {
+        displayEndOfGame(true);
+        return;
+    }
+
+    const currentQuestion = shuffledQuestions.shift();
+    const questionElement = document.querySelector('.question h3');
+    const optionsContainer = document.querySelector('.options');
+
+    questionElement.textContent = currentQuestion.question;
+    optionsContainer.innerHTML = '';
+
+    currentQuestion.options.forEach(function(option, index) {
+        const button = document.createElement('button');
+        button.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
+        button.classList.add('option');
+        button.onclick = function() {
+            checkAnswer(option, currentQuestion.answer);
+        };
+        optionsContainer.appendChild(button);
+    });
+}
+
+function checkAnswer(selectedOption, correctAnswer) {
+    totalAttemptedQuestionsCount++;
+    questionsInCurrentSetCount++;
+    if (selectedOption === correctAnswer) {
+        correctAnswersCount++;
+    }
+    document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${questionsInCurrentSetCount}`;
+    displayNextQuestion();
+}
+
+function displayEndOfGame(final) {
+    document.getElementById('quiz-container').style.display = 'none';
+    const endOfGameElement = document.getElementById('end-of-game');
+    endOfGameElement.style.display = 'block';
+    endOfGameElement.innerHTML = '';
+
+    const scoreDisplay = document.createElement('p');
+    scoreDisplay.textContent = `Score: ${correctAnswersCount} out of ${questionsInCurrentSetCount}`;
+    endOfGameElement.appendChild(scoreDisplay);
+
+    const gameButton = document.createElement('button');
+    gameButton.textContent = final ? 'Restart Game' : 'Start Next Set';
+    gameButton.id = 'new-game-button';
+    gameButton.classList.add('new-game-button');
+    gameButton.onclick = function() {
+        startNewGame(final); // Pass true to restart the game, false to proceed to next set
+    };
+    endOfGameElement.appendChild(gameButton);
 }
