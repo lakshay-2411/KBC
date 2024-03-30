@@ -7,13 +7,14 @@ body, h1, h2, p {
 /* Basic styling for the body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('assests/bg.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire background */
     color: #333;
 }
 
 /* Header styling */
 header {
-    background-color: #007BFF; /* Updated color to match a vibrant KBC theme */
+    background-color: rgba(0, 0, 50, 0.8); /* Dark blue with some transparency */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -33,7 +34,7 @@ main {
     max-width: 800px;
     margin: 40px auto; /* Increased margin for visual separation from the footer */
     padding: 20px;
-    background-color: #fff;
+    background-color: #a28d05c4;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
 }
@@ -42,7 +43,7 @@ main {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #007BFF; /* Matching the header */
+    background-color: rgba(0, 0, 50, 0.8); /* Dark blue with some transparency */
     color: #fff;
     position: fixed;
     bottom: 0;
@@ -51,39 +52,39 @@ footer {
 
 /* Quiz container styling */
 .quiz-container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Updated to a semi-transparent white */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    padding: 30px; /* Increased padding for better spacing */
     margin-bottom: 20px; /* Ensure there's space before the fixed footer */
 }
 
 /* Question styling */
 .question h3 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.5em; /* Increased font size for better readability */
+    margin-bottom: 30px; /* Increased margin for better spacing */
 }
 
 /* Options styling */
 .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+    grid-gap: 20px; /* Increased gap between options for better separation */
 }
 
 .option {
-    background-color: #e9ecef; /* Slightly lighter for better readability */
-    border: 2px solid #007BFF; /* Added border to match the theme */
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1em;
+    background-color: #f8f9fa; /* Light gray background */
+    border: 2px solid #007BFF; /* Blue border */
+    padding: 15px 25px; /* Increased padding for better button appearance */
+    border-radius: 8px; /* Slightly rounded corners */
+    font-size: 1.2em; /* Increased font size for better visibility */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for interaction */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for better interaction */
 }
 
 .option:hover {
-    background-color: #ddd;
-    transform: scale(1.05); /* Slight increase in size on hover */
+    background-color: #e9ecef; /* Lighter gray on hover */
+    transform: translateY(-3px); /* Slight upward movement on hover */
 }
 
 /* Styling for the 'Start a new game' button */
@@ -100,4 +101,35 @@ footer {
 
 .new-game-button:hover {
     background-color: #218838; /* Darker green on hover */
+}
+
+/* Lifeline button styling */
+.lifeline-button {
+    background-color: rgba(196, 0, 0, 0.83); /* Dark red with some transparency */
+    color: #fff; /* White text color for contrast */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.lifeline-button:hover {
+    background-color: rgba(0, 0, 50, 1); /* Dark red without transparency on hover */
+}
+
+/* Styling for the 'Attempted Questions Count' section */
+#attempted-questions-count {
+    background-color: rgba(53, 4, 50, 0.8); /* Dark blue with some transparency */
+    color: #fff; /* White text color for contrast */
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+/* CSS class to hide the lifeline button */
+.hidden {
+    display: none;
 }

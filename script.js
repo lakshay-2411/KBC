@@ -41,10 +41,27 @@ function startNewGame(isNewGame) {
         lifelineUsed = false; // Reset lifeline usage for the new set
     }
     
+    // Show the lifeline button
+    const lifelineButton = document.getElementById('lifeline-button');
+    lifelineButton.classList.remove('hidden');
+    
+    // Reset lifeline button's background color and text
+    lifelineButton.style.backgroundColor = 'rgba(196, 0, 0, 0.83)';
+    lifelineButton.textContent = '50-50 Lifeline';
+    
     document.getElementById('quiz-container').style.display = 'block';
     document.getElementById('end-of-game').style.display = 'none';
     document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${questionsInCurrentSetCount}`;
     displayNextQuestion();
+}
+
+// Load the next question audio
+const nextQuestionAudio = document.getElementById('nextQuestionAudio');
+
+// Function to play the next question audio
+function playNextQuestionAudio() {
+    nextQuestionAudio.currentTime = 0; // Reset audio to the beginning
+    nextQuestionAudio.play(); // Play the audio
 }
 
 
@@ -84,6 +101,9 @@ function displayNextQuestion() {
         };
         optionsContainer.appendChild(button);
     });
+
+    // Play the next question audio
+    playNextQuestionAudio();
 }
 
 function useFiftyFiftyLifeline(options, correctAnswer) {
@@ -103,6 +123,14 @@ function useFiftyFiftyLifeline(options, correctAnswer) {
                 button.textContent = `${String.fromCharCode(65 + options.indexOf(buttonText))}.`; // Clear text content
             }
         });
+        
+        // Change the color of the lifeline button to match the background color of the quiz container
+        const lifelineButton = document.getElementById('lifeline-button');
+        const quizContainer = document.getElementById('quiz-container');
+        lifelineButton.style.backgroundColor = getComputedStyle(quizContainer).backgroundColor;
+
+        // Hide the lifeline button
+        lifelineButton.classList.add('hidden');
     }
     // If there are fewer than two incorrect options, don't do anything
 }
@@ -114,7 +142,11 @@ function checkAnswer(selectedOption, correctAnswer) {
     if (selectedOption === correctAnswer) {
         correctAnswersCount++;
     }
-    document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${questionsInCurrentSetCount}`;
+
+    const attemptedQuestionsCount = document.getElementById('attempted-questions-count');
+    attemptedQuestionsCount.textContent = `Attempted Questions: ${questionsInCurrentSetCount}`;
+    attemptedQuestionsCount.style.cssText = 'font-size: 1.5em; color: #fff; background-color: rgba(0, 0, 50, 0.8); padding: 10px; border-radius: 5px; margin: 20px 0;'; // Set font size and other styles
+
     displayNextQuestion();
 }
 
@@ -126,6 +158,12 @@ function displayEndOfGame(final) {
 
     const scoreDisplay = document.createElement('p');
     scoreDisplay.textContent = `Score: ${correctAnswersCount} out of ${questionsInCurrentSetCount}`;
+    scoreDisplay.style.fontSize = '1.5em'; // Increase font size
+    scoreDisplay.style.color = '#fff'; // Text color
+    scoreDisplay.style.backgroundColor = 'rgba(0, 0, 69, 0.8)'; // Background color
+    scoreDisplay.style.padding = '10px'; // Padding
+    scoreDisplay.style.borderRadius = '5px'; // Border radius
+    scoreDisplay.style.margin = '20px 0'; // Margin to create gap
     endOfGameElement.appendChild(scoreDisplay);
 
     const gameButton = document.createElement('button');
