@@ -1,0 +1,165 @@
+[    
+    {
+    "question": "A square tin sheet of side 12 cm is converted into a box with open top in the following steps: The sheet is placed horizontally. Then, equal-sized squares, each of side x cm, are cut from the four corners of the sheet. Finally, the four resulting sides are bent vertically upwards in the shape of a box. If x is an integer, then what value of x maximizes the volume of the box?",
+    "options": ["1", "4", "3", "2"],
+    "answer": "2"
+    },
+    {
+    "question": "A and B invest Rs 3 lakhs and Rs 4 lakhs in a business. A receives Rs 1,000 per month out of the profit as a remuneration for running the business and the rest of profit is divided in proportion to the investments. If in a year 'A' totally receives X 39,000, what does B receive?",
+    "options": ["63,000", "46,000", "36,000", "26,000"],
+    "answer": "36,000"
+    },
+    {
+    "question": "A, B and C enter into a partnership by investing in the ratio of 3 : 2 : 4. After one year, B invests another Rs 2,70,000 and C, at the end of 2 years invests Rs 2,70,000. At the end of three years, profits are shared in the ratio of 3 : 4 : 5. Find the initial investment of A, B and C.",
+    "options": ["Rs 2,70,000; Rs 80,000 and Rs 3,60,000", "Rs 1,70,000; Rs 1,80,000 and Rs 3,60,000", "Rs 2,70,000; Rs 1,80,000 and Rs 3,60,000", "Rs 2,70,000; Rs 1,80,000 and Rs 3,00,000"],
+    "answer": "Rs 2,70,000; Rs 1,80,000 and Rs 3,60,000"
+    },
+    {
+    "question": "Two vessels contain mixtures of milk and water in the ratio of 8 : 1 and 1 : 5 respectively. The contents of both of these are mixed in a specific ratio into a third vessel. How much mixture must be drawn from the second vessel to fill the third vessel (capacity 26 gallons) completely in order that the resulting mixture may be half milk and half water?",
+    "options": ["10 gallons", "12 gallons", "13 gallons", "14 gallons"],
+    "answer": "14 gallons"
+    },
+    {
+    "question": "Which one of the following numbers is different from others?",
+    "options": ["396", "462", "572", "427", "671", "264"],
+    "answer": "427"
+    },
+    {
+    "question": "Which of the following equations is equal to 1?",
+    "options": ["1 / (1 + a(n - m)) + 1 / (1 + a(m - n))", "1 / a^(m + n)", "1 / (a + m) + 1 / (a + n)", "1 / (a - m) + 1 / (a - n)"],
+    "answer": "1 / (1 + a(n - m)) + 1 / (1 + a(m - n))"
+    },
+    {
+    "question": "What is the value of (0.04)^(-1.5)?",
+    "options": ["25", "125", "250", "625"],
+    "answer": "125"
+    },
+    {
+    "question": "From a group of 7 men and 6 women, five persons are to be selected to form a committee so that at least 3 men are there on the committee. In how many ways can it be done?",
+    "options": ["564", "645", "735", "756"],
+    "answer": "756"
+    },
+    {
+    "question": "How many 4-letter words with or without meaning, can be formed out of the letters of the word, 'LOGARITHMS', if repetition of letters is not allowed?",
+    "options": ["40", "400", "5040", "2520"],
+    "answer": "5040"
+    },
+    {
+    "question": "In a row of 8 houses, Jack is not the neighbour of Siman, Harry is just next to the left of Larry, and there is at least one house to the left of Larry. Paul lives in one of the two houses in the middle, and Mike lives between Paul and Larry. If at least one person lives to the right of Robert and Harry is not between Taud and Larry, then which one of the following statements is not correct?",
+    "options": [
+    "Robert is not at the left end.",
+    "Robert is in between Simon and Taud.",
+    "Taud is in between Paul and Jack.",
+    "There are three persons to the right of Paul."
+    ],
+    "answer": "Taud is in between Paul and Jack."
+    },
+    
+    
+    {
+    "question": "Yesterday I saw an ice cube which had already melted due to heat of a nearby furnace.",
+    "options": ["Always", "Never", "Often", "Sometimes"],
+    "answer": "Never"
+    },
+    {
+    "question": "Here are some words translated from an artificial language. migenlasan means cupboard lasanpoen means boardwalk cuopdansa means pullman. Which word could mean 'walkway'?",
+    "options": ["poenmigen", "cuopeisel", "lasandansa", "poenforc"],
+    "answer": "poenforc"
+    },
+    {
+    "question": "To have an axe to grind",
+    "options": ["A private end to serve", "To fail to arouse interest", "To have no result", "To work for both sides"],
+    "answer": "A private end to serve"
+    },
+    {
+    "question": "A man of straw",
+    "options": ["A man of no substance", "A very active person", "A worthy fellow", "An unreasonable person"],
+    "answer": "A man of no substance"
+    },
+    {
+    "question": "The difference between simple interest and compound on Rs. 1200 for one year at 10% per annum reckoned half-yearly is:",
+    "options": ["Rs. 2.50", "Rs. 3", "Rs. 3.75", "Rs. 4"],
+    "answer": "Rs. 3"
+    },
+    {
+    "question": "The compound interest on a certain sum for 2 years at 10% per annum is Rs. 525. The simple interest on the same sum for double the time at half the rate percent per annum is:",
+    "options": ["Rs. 400", "Rs. 500", "Rs. 600", "Rs. 800"],
+    "answer": "Rs. 500"
+    },
+    {
+    "question": "Two trains of equal length are running on parallel lines in the same direction at 46 km/hr and 36 km/hr. The faster train passes the slower train in 36 seconds. The length of each train is:",
+    "options": ["50 m", "72 m", "80 m", "82 m"],
+    "answer": "50 m"
+    },
+    {
+    "question": "The percentage profit earned by selling an article for Rs. 1920 is equal to the percentage loss incurred by selling the same article for Rs. 1280. At what price should the article be sold to make 25% profit?",
+    "options": ["Rs. 2000", "Rs. 2200", "Rs. 2400", "Rs. 2500"],
+    "answer": "Rs. 2000"
+    },
+    {
+    "question": "A trader mixes 26 kg of rice at Rs. 20 per kg with 30 kg of rice of other variety at Rs. 36 per kg and sells the mixture at Rs. 30 per kg. His profit percent is:",
+    "options": ["No profit, no loss", "5%", "8%", "10%"],
+    "answer": "5%"
+    },
+    {
+    "question": "Mr. Thomas invested an amount of Rs. 13,900 divided in two different schemes A and B at the simple interest rate of 14% p.a. and 11% p.a. respectively. If the total amount of simple interest earned in 2 years be Rs. 3508, what was the amount invested in Scheme B?",
+    "options": ["Rs. 6400", "Rs. 6500", "Rs. 7200", "Rs. 7500"],
+    "answer": "Rs. 6400"
+    },
+    {
+    "question": "A, B and C enter into a partnership in the ratio : : . After 4 months, A increases his share 50%. If the total profit at the end of one year be Rs. 21,600, then B's share in the profit is:",
+    "options": ["Rs. 2100", "Rs. 2400", "Rs. 3600", "Rs. 4000"],
+    "answer": "Rs. 4000"
+    },
+    {
+    "question": "A, B, C rent a pasture. A puts 10 oxen for 7 months, B puts 12 oxen for 5 months and C puts 15 oxen for 3 months for grazing. If the rent of the pasture is Rs. 175, how much must C pay as his share of rent?",
+    "options": ["Rs. 45", "Rs. 50", "Rs. 55", "Rs. 60"],
+    "answer": "Rs. 45"
+    },
+    {
+    "question": "The study of ancient societies",
+    "options": ["Anthropology", "Archaeology", "History", "Ethnology"],
+    "answer": "Archaeology"
+    },
+    {
+    "question": "To issue a thunderous verbal attack",
+    "options": ["Languish", "Animate", "Fulminate", "Invigorate"],
+    "answer": "Fulminate"
+    },
+    {
+    "question": "What will be the day of the week on 15th August, 2010?",
+    "options": ["Sunday", "Monday", "Tuesday", "Friday"],
+    "answer": "Sunday"
+    },
+    {
+    "question": "On what dates of April, 2001 did Wednesday fall?",
+    "options": ["1st, 8th, 15th, 22nd, 29th", "2nd, 9th, 16th, 23rd, 30th", "3rd, 10th, 17th, 24th", "4th, 11th, 18th, 25th"],
+    "answer": "4th, 11th, 18th, 25th"
+    },
+    {
+    "question": "How many days are there in x weeks x days?",
+    "options": ["7x2", "8x", "14x", "7"],
+    "answer": "8x"
+    },
+    {
+    "question": "A clock is started at noon. By 10 minutes past 5, the hour hand has turned through:",
+    "options": ["145°", "150°", "155°", "160°"],
+    "answer": "155°"
+    },
+    {
+    "question": "The angle between the minute hand and the hour hand of a clock when the time is 4.20, is:",
+    "options": ["0°", "10°", "5°", "20°"],
+    "answer": "10°"
+    },
+    {
+    "question": "A hollow iron pipe is 21 cm long and its external diameter is 8 cm. If the thickness of the pipe is 1 cm and iron weighs 8 g/cm3, then the weight of the pipe is:",
+    "options": ["3.563 kg", "3.696 kg", "4.2 kg", "3.339 kg"],
+    "answer": "3.696 kg"
+    },
+    {
+    "question": "A cistern of capacity 8000 litres measures externally 3.3 m by 2.6 m by 1.1 m and its walls are 5 cm thick. The thickness of the bottom is:",
+    
+    "options": ["90 cm", "1 dm", "1 m", "1.1 cm"],
+    "answer": "1 dm"
+    }
+]
