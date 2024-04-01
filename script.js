@@ -39,10 +39,14 @@ function startNewGame(isNewGame) {
     }
     
     document.getElementById('end-of-game').style.display = 'none';
-    //document.getElementById('attempted-questions-count').textContent = `Attempted Questions: ${questionsInCurrentSetCount}`;
-    displayNextQuestion();
-}
+    document.getElementById('quiz-container').style.display = 'block'; // Make the quiz container visible
 
+    if (shuffledQuestions.length > 0) {
+        displayNextQuestion();
+    } else {
+        displayEndOfGame 
+    }
+}
 // Load the next question audio
 const nextQuestionAudio = document.getElementById('nextQuestionAudio');
 
@@ -83,6 +87,7 @@ function displayNextQuestion() {
     playNextQuestionAudio();
 }
 
+
 function checkAnswer(selectedOption, correctAnswer) {
     totalAttemptedQuestionsCount++;
     questionsInCurrentSetCount++;
@@ -102,16 +107,25 @@ function displayEndOfGame(final) {
     endOfGameElement.style.display = 'block';
     endOfGameElement.innerHTML = '';
 
+    // Display the score from the previous set
     const scoreDisplay = document.createElement('p');
     scoreDisplay.textContent = `Score: ${correctAnswersCount} out of ${questionsInCurrentSetCount}`;
-    scoreDisplay.style.fontSize = '1.5em'; // Increase font size
-    scoreDisplay.style.color = '#fff'; // Text color
-    scoreDisplay.style.backgroundColor = 'rgba(0, 0, 69, 0.8)'; // Background color
-    scoreDisplay.style.padding = '10px'; // Padding
-    scoreDisplay.style.borderRadius = '5px'; // Border radius
-    scoreDisplay.style.margin = '20px 0'; // Margin to create gap
+    scoreDisplay.style.fontSize = '1.5em';
+    scoreDisplay.style.color = '#fff';
+    scoreDisplay.style.backgroundColor = 'rgba(0, 0, 69, 0.8)';
+    scoreDisplay.style.padding = '10px';
+    scoreDisplay.style.borderRadius = '5px';
+    scoreDisplay.style.margin = '20px 0';
     endOfGameElement.appendChild(scoreDisplay);
 
+    // Display the total questions attempted
+    const totalQuestionsAttemptedDisplay = document.createElement('p');
+    totalQuestionsAttemptedDisplay.textContent = `Total Questions Attempted: ${totalAttemptedQuestionsCount}`;
+    totalQuestionsAttemptedDisplay.style.fontSize = '1.2em';
+    totalQuestionsAttemptedDisplay.style.color = '#fff';
+    endOfGameElement.appendChild(totalQuestionsAttemptedDisplay);
+
+    // Create the "Start Next Set" button
     const gameButton = document.createElement('button');
     gameButton.textContent = final ? 'Restart Game' : 'Start Next Set';
     gameButton.id = 'new-game-button';
