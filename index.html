@@ -8,13 +8,11 @@
     <audio id="nextQuestionAudio" src="nextQuestion.mp3"></audio>
 </head>
 <body>
-    <header>
-        <h1>KBC</h1>
-        <h2 id="greeting">Welcome to KBC</h2>
-    </header>
+    <!-- <header>
+        <button id="lifeline-button" class="lifeline-button">50-50 Lifeline</button>
+    </header> -->
     <main>
         <div id="quiz-container" class="quiz-container">
-            <button id="lifeline-button" class="lifeline-button">50-50 Lifeline</button>
             <div class="question">
                 <h3></h3>
             </div>
@@ -22,14 +20,11 @@
                 <!-- Option buttons will be dynamically filled -->
             </div>
         </div>
-        <div id="attempted-questions-count">Attempted Questions: 0</div>
+        <div id="attempted-questions-count"></div>
         <div id="end-of-game" style="display: none;">
             <!-- End of game message and restart/new game button will be dynamically generated -->
         </div>
     </main>
-    <footer>
-        <p>&copy; 2024 KBC. All rights reserved.</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
