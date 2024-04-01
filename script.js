@@ -107,6 +107,7 @@ function displayEndOfGame(final) {
     endOfGameElement.style.display = 'block';
     endOfGameElement.innerHTML = '';
 
+    /*
     // Display the score from the previous set
     const scoreDisplay = document.createElement('p');
     scoreDisplay.textContent = `Score: ${correctAnswersCount} out of ${questionsInCurrentSetCount}`;
@@ -117,13 +118,16 @@ function displayEndOfGame(final) {
     scoreDisplay.style.borderRadius = '5px';
     scoreDisplay.style.margin = '20px 0';
     endOfGameElement.appendChild(scoreDisplay);
+    */
 
+    /*
     // Display the total questions attempted
     const totalQuestionsAttemptedDisplay = document.createElement('p');
     totalQuestionsAttemptedDisplay.textContent = `Total Questions Attempted: ${totalAttemptedQuestionsCount}`;
     totalQuestionsAttemptedDisplay.style.fontSize = '1.2em';
     totalQuestionsAttemptedDisplay.style.color = '#fff';
     endOfGameElement.appendChild(totalQuestionsAttemptedDisplay);
+    */
 
     // Create the "Start Next Set" button
     const gameButton = document.createElement('button');
