@@ -100,16 +100,16 @@ function selectOption(optionButton, selectedOption, correctAnswer) {
     // Reset background color of all options
     const allOptions = document.querySelectorAll('.option');
     allOptions.forEach(option => {
-        option.style.backgroundColor = '';
+        option.style.background = '';
     });
 
     // Highlight the selected option in yellow
-    optionButton.style.background = 'yellow';
+    optionButton.style.background = 'goldenrod';
 }
 
 // Function to submit the answer
 function submitAnswer(correctAnswer) {
-    const selectedOption = document.querySelector('.option[style="background: yellow;"]');
+    const selectedOption = document.querySelector('.option[style="background: goldenrod;"]');
     if (!selectedOption) {
         // No option selected, do nothing
         return;
@@ -148,8 +148,8 @@ function submitAnswer(correctAnswer) {
             quizContainer.style.opacity = '1';
             submitContainer.style.opacity = '1';
             displayNextQuestion();
-        }, 400);
-    }, 400);
+        }, 2000);
+    }, 3000);
 }
 
 function checkAnswer(selectedOption, correctAnswer) {
