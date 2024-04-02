@@ -39,10 +39,11 @@ function startNewGame(isNewGame) {
     }
     
     document.getElementById('end-of-game').style.display = 'none';
-    document.getElementById('quiz-container').style.display = 'block'; // Make the quiz container visible
+    document.getElementById('quiz-container').style.display = 'flex'; // Make the quiz container visible
 
     if (shuffledQuestions.length > 0) {
         displayNextQuestion();
+        if(!isNewGame) document.getElementById('submit-button').style.display = 'block';
     } else {
         displayEndOfGame 
     }
@@ -78,15 +79,78 @@ function displayNextQuestion() {
         button.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
         button.classList.add('option');
         button.onclick = function() {
-            checkAnswer(option, currentQuestion.answer);
+            // Call a function to handle option selection
+            selectOption(button, option, currentQuestion.answer);
         };
         optionsContainer.appendChild(button);
     });
+
+    // Create a submit button
+    const submitButton = document.getElementById('submit-button');
+    submitButton.onclick = function() {
+        submitAnswer(currentQuestion.answer);
+    };
 
     // Play the next question audio
     playNextQuestionAudio();
 }
 
+// Function to handle option selection
+function selectOption(optionButton, selectedOption, correctAnswer) {
+    // Reset background color of all options
+    const allOptions = document.querySelectorAll('.option');
+    allOptions.forEach(option => {
+        option.style.backgroundColor = '';
+    });
+
+    // Highlight the selected option in yellow
+    optionButton.style.background = 'yellow';
+}
+
+// Function to submit the answer
+function submitAnswer(correctAnswer) {
+    const selectedOption = document.querySelector('.option[style="background: yellow;"]');
+    if (!selectedOption) {
+        // No option selected, do nothing
+        return;
+    }
+
+    totalAttemptedQuestionsCount++;
+    questionsInCurrentSetCount++;
+
+    const options = document.querySelectorAll('.option');
+
+    if (selectedOption.textContent.includes(correctAnswer)) {
+        // Correct answer
+        selectedOption.style.backgroundColor = 'green';
+        correctAnswersCount++;
+    } else {
+        // Incorrect answer
+        selectedOption.style.backgroundColor = 'red';
+        // Highlight correct answer in green
+        const options = document.querySelectorAll('.option');
+        options.forEach(option => {
+            if (option.textContent.includes(correctAnswer)) {
+                option.style.background = 'green';
+            }
+        });
+    }
+
+    // After 2 seconds, fade out the current question container
+    setTimeout(function() {
+        const quizContainer = document.getElementById('quiz-container');
+        const submitContainer = document.getElementById('submit-button');
+        quizContainer.style.opacity = '0';
+        submitContainer.style.opacity = '0'
+
+        // After another 2 seconds, fade in the next question container and display the next question
+        setTimeout(function() {
+            quizContainer.style.opacity = '1';
+            submitContainer.style.opacity = '1';
+            displayNextQuestion();
+        }, 400);
+    }, 400);
+}
 
 function checkAnswer(selectedOption, correctAnswer) {
     totalAttemptedQuestionsCount++;
@@ -103,6 +167,7 @@ function checkAnswer(selectedOption, correctAnswer) {
 
 function displayEndOfGame(final) {
     document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('submit-button').style.display = 'none';
     const endOfGameElement = document.getElementById('end-of-game');
     endOfGameElement.style.display = 'block';
     endOfGameElement.innerHTML = '';
