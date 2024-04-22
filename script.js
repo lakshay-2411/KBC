@@ -1,4 +1,4 @@
-fetch('gk.json')
+fetch('sportsEntertainment.json')
     .then(response => response.json())
     .then(data => {
         questions = data;
