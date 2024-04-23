@@ -419,11 +419,6 @@
     "answer": "Mary Poppins"
     },
     {
-    "question": "Cesária Évora (27 August 1941 – 17 December 2011) was a Cape Verdean popular singer. In 1997, she won KORA All African Music Awards and in 2003, her album Voz d'Amor was awarded a Grammy in the World music category. She was well known for performing without shoes. State her popular Nick Name.",
-    "answer": "Barefoot Diva"
-    },
-
-    {
     "question": "When did the film industry start to have a big effect?",
     "options": ["Early 20th Century", "Early 15th Century", "Early 19th Century", "Early 1st Century"],
     "answer": "Early 20th Century"
@@ -632,7 +627,7 @@
     {
     "question": "What will be the number of matches in IPL 2024?",
     "options": ["60 matches", "74 matches", "84 matches", "90 matches"],
-    "answer": "74 matches in total"
+    "answer": "74 matches"
     },
     {
     "question": "Which of the following iconic players remained unsold in the IPL 2022 auction?",
@@ -658,11 +653,6 @@
     "question": "Who was the leading run-scorer in IPL 2023?",
     "options": ["Faf du Plessis", "Shubman Gill", "Virat Kohli", "Ruturaj Gaikwad"],
     "answer": "Shubman Gill"
-    },
-    {
-    "question": "Who became the first cricketer to win three top ICC honors in the same year?",
-    "options": ["Sachin Tendulkar", "Ricky Ponting", "Virat Kohli", "MS Dhoni"],
-    "answer": "Virat Kohli"
     },
     {
     "question": "Who was the top wicket-taker for the Rajasthan Royals in IPL 2023?",
@@ -737,12 +727,12 @@
     {
     "question": "How many days did the longest recorded Test match last?",
     "options": ["Seven days", "Eight days", "Nine days", "Ten days"],
-    "answer": "Nine days (England v South Africa, 1939)"
+    "answer": "Nine days"
     },
     {
     "question": "Who is the only batsman to record 400 in a single innings in an international test match?",
     "options": ["Brian Lara", "Sachin Tendulkar", "Ricky Ponting", "Jacques Kallis"],
-    "answer": "Brian Lara (v England in 2004)"
+    "answer": "Brian Lara"
     },
     {
     "question": "Who was the first player to reach 10,000 runs in Test cricket?",
@@ -751,8 +741,8 @@
     },
     {
     "question": "Which teams won the first edition of The 100, in the Men's and Women's events?",
-    "options": ["Men's – Manchester Originals, Women's – Oval Invincibles", "Men's – Trent Rockets, Women's – Birmingham Phoenix", "Men's – Southern Brave, Women's – Oval Invincibles", "Men's – Welsh Fire, Women's – London Spirit"],
-    "answer": "Men's – Southern Brave, Women's – Oval Invincibles"
+    "options": ["Men's - Manchester Originals, Women's - Oval Invincibles", "Men's - Trent Rockets, Women's  Birmingham Phoenix", "Men's  Southern Brave, Women's  Oval Invincibles", "Men's  Welsh Fire, Women's  London Spirit"],
+    "answer": "Men's - Southern Brave, Women's - Oval Invincibles"
     },
     {
     "question": "Who did England beat in the 2019 Cricket World Cup Final?",
@@ -786,13 +776,8 @@
     },
     {
     "question": "What is the title of the autography of Major Dhyanchand?",
-    "options": ["Goal", "Hockey Days", "Hockey – My Life", "Me & My Hockey"],
+    "options": ["Goal", "Hockey Days", "Hockey  My Life", "Me & My Hockey"],
     "answer": "Goal"
-    },
-    {
-    "question": "Pen Holder grip is used in which of the following sports?",
-    "options": ["Cricket", "Hockey", "Table Tennis", "Badminton"],
-    "answer": "Table Tennis"
     },
     {
     "question": "Who has designed the trophy of FIFA Women’s World Cup?",
@@ -823,11 +808,6 @@
     "question": "Which are the colors of the rings present in the symbol of the Olympic Games?",
     "options": ["Blue, Yellow, Black, Green, Red", "Blue, Orange, Violet, Green, Red", "Blue, Olive, Purple, Green, Red", "Blue, Black, White, Green, Red"],
     "answer": "Blue, Yellow, Black, Green, Red"
-    },
-    {
-    "question": "Which country will host the 2022 Commonwealth Games?",
-    "options": ["Ireland", "Canada", "England", "New Zealand"],
-    "answer": "England"
     },
     {
     "question": "Which is the second-largest multi-sport event after the Olympic Games?",
@@ -895,7 +875,7 @@
     "answer": "Shahid Afridi (Pakistan)"
     },
     {
-    "question": "How many players are there on the pitch during a hockey match?",
+    "question": "How many players of a team are there on the pitch during a hockey match?",
     "options": ["11", "20", "12", "18"],
     "answer": "11"
     },
@@ -940,39 +920,9 @@
     "answer": "Green Jacket"
     },
     {
-    "question": "India played its first one day international with which country and in which year?",
-    "options": ["England 1974", "Australia 1976", "New Zealand 1975", "England 1978"],
-    "answer": "England 1974"
-    },
-    {
-    "question": "What is the title of the autography of Major Dhyanchand?",
-    "options": ["Goal", "Hockey Days", "Hockey – My Life", "Me & My Hockey"],
-    "answer": "Goal"
-    },
-    {
     "question": "Pen Holder grip is used in which of the following sports?",
     "options": ["Cricket", "Hockey", "Table Tennis", "Badminton"],
     "answer": "Table Tennis"
-    },
-    {
-    "question": "Who has designed the trophy of FIFA Women’s World Cup?",
-    "options": ["William Sawaya", "Formiga", "Marta", "Sun Wen"],
-    "answer": "William Sawaya"
-    },
-    {
-    "question": "When was the name of National Boxing Association changed to World Boxing Association?",
-    "options": ["1958", "1962", "1969", "1970"],
-    "answer": "1962"
-    },
-    {
-    "question": "Where are the headquarters of International Paralympic Committee?",
-    "options": ["Germany", "Bulgaria", "Spain", "England"],
-    "answer": "Germany"
-    },
-    {
-    "question": "Which is the governing body of Cycling sport in the world?",
-    "options": ["Cycling Association of the World", "World Cycling Federation", "International Cycling Union", "International Cycling Association"],
-    "answer": "International Cycling Union"
     },
     {
     "question": "What is the normal time difference between the Summer Olympics and Winter Olympics?",
@@ -990,24 +940,9 @@
     "answer": "England"
     },
     {
-    "question": "Which is the second-largest multi-sport event after the Olympic Games?",
-    "options": ["European Games", "Pan American Games", "Asian Games", "Commonwealth Games"],
-    "answer": "Asian Games"
-    },
-    {
-    "question": "Which country will host the 2026 Asian Games?",
-    "options": ["China", "Japan", "Philippines", "South Korea"],
-    "answer": "Japan"
-    },
-    {
     "question": "Which city hosted Independent India's first National Games?",
     "options": ["Madras", "New Delhi", "Patiala", "Lucknow"],
     "answer": "Lucknow"
-    },
-    {
-    "question": "Who was the champion of the 2015 Cricket World Cup?",
-    "options": ["New Zealand", "Australia", "India", "England"],
-    "answer": "Australia"
     },
     {
     "question": "In which Olympics was Kabaddi introduced for promotional purposes as a demonstration sport?",
@@ -1015,9 +950,9 @@
     "answer": "1936 Olympics"
     },
     {
-    "question": "Which country became the runner-up in the 2018 FIFA Football World Cup?",
-    "options": ["England", "Belgium", "Croatia", "France"],
-    "answer": "Croatia"
+    "question": "Which country became the runner-up in the 2014 FIFA Football World Cup?",
+    "options": ["Argentina", "Belgium", "Croatia", "France"],
+    "answer": "Argentina"
     },
     {
     "question": "Which continent's governing body of football is CONMEBOL?",
@@ -1030,11 +965,6 @@
     "answer": "4"
     },
     {
-    "question": "What is Anthony Amalraj famous for?",
-    "options": ["As an Indian squash player", "As an Indian badminton player", "As an Indian table tennis player", "As an Indian tennis player"],
-    "answer": "As an Indian table tennis player"
-    },
-    {
     "question": "Which sport's competition is known as the 'Walker Cup'?",
     "options": ["Tennis", "Golf", "Badminton", "Cricket"],
     "answer": "Golf"
@@ -1043,21 +973,6 @@
     "question": "Which sport's traditional form is 'Malla-yuddha'?",
     "options": ["Wrestling", "Boxing", "Kabaddi", "Hockey"],
     "answer": "Wrestling"
-    },
-    {
-    "question": "What is the biggest cricket stadium in the world?",
-    "options": ["Lord's Cricket Ground (England)", "Eden Gardens (India)", "Sydney Cricket Ground (Australia)", "Narendra Modi Stadium (India)"],
-    "answer": "Narendra Modi Stadium (India)"
-    },
-    {
-    "question": "Who holds the record for smashing the most sixes in ODI cricket?",
-    "options": ["Chris Gayle (West Indies)", "AB de Villiers (South Africa)", "Shahid Afridi (Pakistan)", "Martin Guptill (New Zealand)"],
-    "answer": "Shahid Afridi (Pakistan)"
-    },
-    {
-    "question": "How many players are there on the pitch during a hockey match?",
-    "options": ["11", "20", "22", "15"],
-    "answer": "22"
     },
     {
     "question": "Which country has won the Football World Cup the most times?",
