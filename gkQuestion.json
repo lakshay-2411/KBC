@@ -66,17 +66,6 @@
     "answer": "William Shakespeare"
     },
     {
-    "question": "What is the currency of Japan?",
-    "options": ["Yen", "Euro", "Dollar", "Rupee"],
-    "answer": "Yen"
-    },
-    {
-    "question": "Who was the first President of the United States?",
-    "options": ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"],
-    "answer": "George Washington"
-    },
-    
-    {
     "question": "Which planet is known as the Red Planet?",
     "options": ["Venus", "Mars", "Jupiter", "Saturn"],
     "answer": "Mars"
@@ -125,11 +114,6 @@
     "question": "Who was the founder of Buddhism?",
     "options": ["Buddha", "Confucius", "Laozi", "Mahavira"],
     "answer": "Buddha"
-    },
-    {
-    "question": "Which country is known as the 'Land of the Rising Sun'?",
-    "options": ["China", "Japan", "South Korea", "Vietnam"],
-    "answer": "Japan"
     },
     {
     "question": "What year did the Titanic sink?",
@@ -187,11 +171,6 @@
     "answer": "Paavo Nurmi"
     },
     {
-    "question": "In which year did India win its first Olympic gold medal in hockey?",
-    "options": ["1928", "1932", "1936", "1948"],
-    "answer": "1928"
-    },
-    {
     "question": "Which country has won the most FIFA Women's World Cup titles?",
     "options": ["United States", "Germany", "Norway", "Japan"],
     "answer": "United States"
@@ -217,11 +196,6 @@
     "answer": "Andre Agassi"
     },
     {
-    "question": "What is the capital city of Australia?",
-    "options": ["Sydney", "Canberra", "Melbourne", "Brisbane"],
-    "answer": "Canberra"
-    },
-    {
     "question": "Who wrote the famous play 'Romeo and Juliet'?",
     "options": ["William Wordsworth", "William Shakespeare", "Charles Dickens", "Jane Austen"],
     "answer": "William Shakespeare"
@@ -235,16 +209,6 @@
     "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
     "options": ["Amelia Earhart ", "Bessie Coleman", "Jacqueline Cochran", "Harriet Quimby"],
     "answer": "Amelia Earhart"
-    },
-    {
-    "question": "Who painted the Mona Lisa?",
-    "options": ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
-    "answer": "Leonardo da Vinci"
-    },
-    {
-    "question": "Who recently became the first female cricketer to score 10,000 runs in international cricket?",
-    "options": ["Mithali Raj", "Jhulan Goswami", "Harmanpreet Kaur", "Smriti Mandhana"],
-    "answer": "Mithali Raj"
     },
     {
     "question": "Which Indian city recently topped the 2021 Mercer Quality of Living rankings among Indian cities?",
@@ -300,11 +264,6 @@
     "question": "After nine-year ban, Coal mining has resumed legally in which state/UT?",
     "options": ["Assam", "Meghalaya", "West Bengal", "Odisha"],
     "answer": "Meghalaya"
-    },
-    {
-    "question": "Which state/UT launched a dedicated website for food safety and mobile app for consumers?",
-    "options": ["Odisha", "Tamil Nadu", "Goa", "Assam"],
-    "answer": "Tamil Nadu"
     },
     {
     "question": "Meiteis are the largest ethnic group of which state/UT?",
@@ -457,19 +416,9 @@
         "answer": "Telangana"
     },
     {
-        "question": "What is the unit of electric current?",
-        "options": ["Ampere", "Volt", "Ohm", "Watt"],
-        "answer": "Ampere"
-    },
-    {
         "question": "Which African country is known as the 'Pearl of Africa'?",
         "options": ["Uganda", "Kenya", "Tanzania", "Rwanda"],
         "answer": "Uganda"
-    },
-    {
-        "question": "Which city is known as the 'City of Love'?",
-        "options": ["Paris", "Venice", "Rome", "Barcelona"],
-        "answer": "Paris"
     },
     {
         "question": "What is the capital city of Argentina?",
@@ -487,21 +436,6 @@
         "answer": "Riyadh"
     },
     {
-        "question": "What is the chemical symbol for gold?",
-        "options": ["Au", "Ag", "Fe", "Cu"],
-        "answer": "Au"
-    },
-    {
-        "question": "What is the largest reptile in the world?",
-        "options": ["The saltwater crocodile", "The Nile crocodile", "The Komodo dragon", "The green anaconda"],
-        "answer": "The saltwater crocodile"
-    },
-    {
-        "question": "What is the second-largest planet in our solar system?",
-        "options": ["Saturn", "Jupiter", "Uranus", "Neptune"],
-        "answer": "Saturn"
-    },
-    {
         "question": "Who penned the book 'Wings of Fire'?",
         "options": ["APJ Abdul Kalam and Arun Tiwari", "J.K. Rowling", "Dan Brown", "George Orwell"],
         "answer": "APJ Abdul Kalam and Arun Tiwari"
@@ -510,11 +444,6 @@
         "question": "What is the highest dam in India?",
         "options": ["Tehri Dam", "Bhakra Nangal Dam", "Sardar Sarovar Dam", "Hirakud Dam"],
         "answer": "Tehri Dam"
-    },
-    {
-        "question": "Delhi is situated on the bank of which river?",
-        "options": ["Yamuna", "Ganges", "Brahmaputra", "Indus"],
-        "answer": "Yamuna"
     }
 ]
     
