@@ -148,8 +148,8 @@ function submitAnswer(correctAnswer) {
             quizContainer.style.opacity = '1';
             submitContainer.style.opacity = '1';
             displayNextQuestion();
-        }, 1000);
-    }, 1000);
+        }, 3000);
+    }, 3000);
 }
 
 function checkAnswer(selectedOption, correctAnswer) {
